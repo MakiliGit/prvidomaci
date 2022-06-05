@@ -1,0 +1,21 @@
+Aplikacija sluzi za rad sa klubovima u Beogradu.
+U svakom klubu se pusta vise zanrova muzike, a svaki zanr se moze pustati u vise klubova.
+Aplikacija omogucava CRUD operacije nad ovim tabelama u bazi.
+Opis fajlova:
+	- server/db/Broker.php - predstavlja klasu koja sluzi za konektovanje na bazu podataka i izvrsavanje upita
+	- server/servis/KlubServis.php - predstavlja klasu u kojoj se nalazi poslovna logika vezana za klubove. Ova klasa ima referencu na brokera
+	- server/servis/ZanrServis.php - predstavlja klasu u kojoj se nalazi poslovna logika vezana za zanrove. Ova klasa ima referencu na brokera
+	- server/zanr-api/vratiSve.php - putanja koja korisniku vraca sve zanrove u JSON formatu (poziva zanr servis)
+	- server/zanr-api/kreiraj.php - putanja koju korisnik poziva kako bi kreirao zanr (poziva zanr servis)
+	- server/zanr-api/izmeni.php - putanja koju korisnik poziva kako bi izmenio zanr (poziva zanr servis)
+	- server/zanr-api/obrisi.php - putanja koju korisnik poziva kako bi obrisao zanr (poziva zanr servis)
+	- server/klub-api/vratiSve.php - putanja koja korisniku vraca sve klubove u JSON formatu (poziva klub servis)
+	- server/klub-api/kreiraj.php - putanja koju korisnik poziva kako bi kreirao klub (poziva klub servis)
+	- server/klub-api/izmeni.php - putanja koju korisnik poziva kako bi izmenio klub (poziva klub servis)
+	- server/klub-api/obrisi.php - putanja koju korisnik poziva kako bi obrisao klub (poziva klub servis)
+	- server/klub-api/dodaj-zanr.php - putanja koju korisnik poziva kako bi dodao zanr u klub (poziva klub servis)
+	- server/klub-api/izbaci-zanr.php - putanja koju korisnik poziva kako bi izbacio zanr iz kluba (poziva klub servis)
+	- header.php - sadrzi HTML koji je zajednicki za sve stranice (html head i navigaciju)
+	- index.php - sadrzi HTML za rad sa klubovima (prikaz, dodavanje i brisanje)
+	- klub.php - sadrzi HTML za rad sa jednim klubom (izmena, dodavanje i izbacivanje zanrova)
+	- zanrovi.php - sadrzi HTML za rad sa zanrovima (kreiranje, izmena, brisanje, prikaz)
